@@ -1,0 +1,591 @@
+/* InterviewRoom.css */
+
+.ir-page{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:#0b1220;
+  color:#fff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.ir-topbar{
+  height:64px;
+  padding:0 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.ir-brand{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.ir-dot{
+  width:14px;
+  height:14px;
+  border-radius:99px;
+  background:#22c55e;
+  box-shadow:0 0 18px rgba(34,197,94,0.6);
+}
+
+.ir-title{
+  font-weight:800;
+  letter-spacing:.2px;
+}
+.ir-subtitle{
+  font-size:12px;
+  opacity:.75;
+}
+
+.ir-status{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.ir-pill{
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  font-size:12px;
+  opacity:.9;
+}
+
+.ir-main{
+  flex:1;
+  display:flex;
+  gap:14px;
+  padding:14px;
+  overflow:hidden;
+}
+
+.ir-stage{
+  flex:1;
+  overflow:hidden;
+}
+
+.ir-ai-tile{
+  height:100%;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.10);
+  background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  position:relative;
+}
+
+.ir-tile-top{
+  padding:12px 14px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.ir-tile-name{ font-weight:800; }
+.ir-tile-state{ font-size:12px; opacity:.75; }
+
+.ir-ai-center{
+  height:calc(100% - 52px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  padding:18px;
+}
+
+.ir-ai-avatar{
+  width:170px;
+  height:170px;
+  border-radius:999px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(96,165,250,0.95), rgba(37,99,235,0.10));
+  border:1px solid rgba(255,255,255,0.14);
+  box-shadow:0 20px 90px rgba(37,99,235,0.25);
+}
+
+.ir-ai-hint{
+  margin-top:14px;
+  opacity:.85;
+}
+
+.ir-captions{
+  position:absolute;
+  left:16px;
+  right:16px;
+  bottom:16px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:rgba(0,0,0,0.45);
+  border:1px solid rgba(255,255,255,0.10);
+  font-size:13px;
+  line-height:1.35;
+}
+
+/* ✅ Your tile overlay bottom-left */
+.ir-user-overlay{
+  position:absolute;
+  left:14px;
+  bottom:14px;
+  width:320px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.12);
+  background:rgba(0,0,0,0.28);
+  backdrop-filter: blur(10px);
+}
+
+.ir-user-header{
+  padding:10px 10px 8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  border-bottom:1px solid rgba(255,255,255,0.10);
+}
+
+.ir-user-name{ font-weight:800; }
+.ir-user-meta{ font-size:12px; opacity:.75; }
+
+.ir-user-videoWrap{
+  position:relative;
+  height:190px;
+  background:rgba(0,0,0,0.35);
+}
+
+.ir-user-video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.ir-dim{
+  opacity:.15;
+  filter:grayscale(1);
+}
+
+.ir-user-photoWrap{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+
+.ir-user-photo{
+  width:84px;
+  height:84px;
+  border-radius:999px;
+  object-fit:cover;
+  border:1px solid rgba(255,255,255,0.18);
+  box-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+.ir-user-offText{
+  font-size:12px;
+  opacity:.8;
+}
+
+.ir-user-foot{
+  padding:8px 10px;
+  font-size:12px;
+  opacity:.9;
+  border-top:1px solid rgba(255,255,255,0.10);
+}
+
+/* Chat */
+.ir-chat{
+  width:380px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.10);
+  background:rgba(255,255,255,0.06);
+  display:flex;
+  flex-direction:column;
+}
+
+.ir-chat-head{
+  height:54px;
+  padding:0 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.ir-chat-title{ font-weight:900; }
+
+.ir-iconBtn{
+  width:32px;
+  height:32px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.06);
+  color:#fff;
+  cursor:pointer;
+}
+
+.ir-chat-body{
+  flex:1;
+  padding:12px;
+  overflow:auto;
+}
+
+.ir-muted{ opacity:.7; }
+
+.ir-row{
+  display:flex;
+  margin-bottom:10px;
+}
+.ir-row.left{ justify-content:flex-start; }
+.ir-row.right{ justify-content:flex-end; }
+
+.ir-bubble{
+  max-width:78%;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.10);
+  box-shadow:0 8px 22px rgba(0,0,0,0.18);
+  font-size:13px;
+  line-height:1.35;
+  white-space:pre-wrap;
+}
+
+.ir-bubble.ai{ background:#1f2937; }
+.ir-bubble.user{ background:#2563eb; }
+
+.ir-chat-compose{
+  padding:10px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.ir-textarea{
+  flex:1;
+  resize:none;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(0,0,0,0.25);
+  color:#fff;
+  outline:none;
+  font-size:13px;
+}
+
+.ir-send{
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(37,99,235,0.9);
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* Controls */
+.ir-controls{
+  height:78px;
+  padding:0 14px;
+  border-top:1px solid rgba(255,255,255,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.ir-controls-left{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.ir-ctrl{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.12);
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+  cursor:pointer;
+}
+
+.ir-ctrl.on{
+  background:rgba(255,255,255,0.12);
+}
+
+.ir-ctrl.off{
+  border-color: rgba(239,68,68,0.55);
+}
+
+.ir-ctrlIcon{ font-size:16px; }
+.ir-ctrlTxt{ font-size:12px; opacity:.9; }
+
+.ir-end{
+  padding:12px 18px;
+  border-radius:16px;
+  border:1px solid rgba(239,68,68,0.55);
+  background:rgba(239,68,68,0.92);
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* ====================================
+   RESPONSIVE DESIGN
+==================================== */
+
+@media (max-width: 1024px) {
+  .ir-main {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ir-chat {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .ir-stage {
+    height: 60vh;
+  }
+
+  .ir-ai-avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .ir-user-overlay {
+    width: 280px;
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .ir-user-videoWrap {
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ir-topbar {
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  .ir-main {
+    padding: 12px;
+  }
+
+  .ir-stage {
+    height: 50vh;
+  }
+
+  .ir-ai-center {
+    padding: 12px;
+  }
+
+  .ir-ai-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ir-captions {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    font-size: 12px;
+  }
+
+  .ir-user-overlay {
+    width: 250px;
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .ir-user-videoWrap {
+    height: 140px;
+  }
+
+  .ir-user-photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .ir-chat-head {
+    height: 48px;
+    padding: 0 10px;
+  }
+
+  .ir-chat-body {
+    padding: 10px;
+  }
+
+  .ir-chat-compose {
+    padding: 8px;
+  }
+
+  .ir-controls {
+    height: 70px;
+    padding: 0 12px;
+    flex-wrap: wrap;
+  }
+
+  .ir-controls-left {
+    flex-wrap: wrap;
+  }
+
+  .ir-ctrl {
+    padding: 8px 10px;
+  }
+
+  .ir-ctrlTxt {
+    display: none;
+  }
+
+  .ir-end {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ir-topbar {
+    height: 50px;
+    padding: 0 8px;
+  }
+
+  .ir-brand {
+    gap: 8px;
+  }
+
+  .ir-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .ir-title {
+    font-size: 16px;
+  }
+
+  .ir-subtitle {
+    font-size: 11px;
+  }
+
+  .ir-status {
+    gap: 8px;
+  }
+
+  .ir-pill {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .ir-main {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .ir-stage {
+    height: 40vh;
+  }
+
+  .ir-ai-center {
+    padding: 8px;
+  }
+
+  .ir-ai-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .ir-ai-hint {
+    font-size: 14px;
+  }
+
+  .ir-captions {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .ir-user-overlay {
+    width: 200px;
+    left: 8px;
+    bottom: 8px;
+  }
+
+  .ir-user-header {
+    padding: 8px;
+  }
+
+  .ir-user-videoWrap {
+    height: 120px;
+  }
+
+  .ir-user-photo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ir-user-foot {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .ir-chat {
+    max-height: 250px;
+  }
+
+  .ir-chat-head {
+    height: 44px;
+    padding: 0 8px;
+  }
+
+  .ir-chat-body {
+    padding: 8px;
+  }
+
+  .ir-row {
+    margin-bottom: 8px;
+  }
+
+  .ir-bubble {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .ir-chat-compose {
+    padding: 6px;
+    gap: 8px;
+  }
+
+  .ir-textarea {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .ir-send {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .ir-controls {
+    height: 60px;
+    padding: 0 8px;
+  }
+
+  .ir-ctrl {
+    padding: 6px 8px;
+  }
+
+  .ir-end {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
